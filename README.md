@@ -63,7 +63,7 @@ Conducting classification on the test set by the above model, we achieve classif
 To run the code, be sure change the data path and install all dependent lua modules, and run with  command simply as below,
 
 ```
-th main.lua -netType resnet-pre-act -depth 1001 -batchSize 64 -nGPU 2 -nThreads 4 -dataset cifar10 -nEpochs 200 -shareGradInput false
+th main.lua -netType residual-nn-pre -depth 1001 -batchSize 64 -nGPU 2 -nThreads 4 -dataset cifar10 -nEpochs 200 -shareGradInput false
 
 
 
