@@ -1,23 +1,3 @@
---  ResNet-1001
---  This is a re-implementation of the 1001-layer residual networks described in:
---  [a] "Identity Mappings in Deep Residual Networks", arXiv:1603.05027, 2016,
---  authored by Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
-
---  Acknowledgement: This code is contributed by Xiang Ming from Xi'an Jiaotong Univeristy.
-
---  ************************************************************************
---  This code incorporates material from:
-
---  fb.resnet.torch (https://github.com/facebook/fb.resnet.torch)
---  Copyright (c) 2016, Facebook, Inc.
---  All rights reserved.
---
---  This source code is licensed under the BSD-style license found in the
---  LICENSE file in the root directory of this source tree. An additional grant
---  of patent rights can be found in the PATENTS file in the same directory.
---
---  ************************************************************************
-
 local nn = require 'nn'
 require 'cunn'
 
