@@ -10,7 +10,6 @@ local SBatchNorm = nn.SpatialBatchNormalization
 local function createModel(opt)
    local depth = opt.depth
    
-   -- The new Residual Unit in [a]
    local function bottleneck(nInputPlane, nOutputPlane, stride)
       
       local nBottleneckPlane = nOutputPlane / 4

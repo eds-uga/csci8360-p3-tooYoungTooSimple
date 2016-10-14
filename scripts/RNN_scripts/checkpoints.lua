@@ -20,7 +20,7 @@ function checkpoint.latest(opt)
    if opt.resume == 'none' then
       return nil
    end
-
+   -- You can modify this path to what checkpoint you want to load.
    local latestPath = paths.concat(opt.resume, 'latest.t7')
    if not paths.filep(latestPath) then
       return nil

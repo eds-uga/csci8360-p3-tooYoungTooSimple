@@ -1,4 +1,3 @@
-
 local optim = require 'optim'
 
 local M = {}
@@ -81,7 +80,8 @@ function Trainer:test(epoch, dataloader)
    local nCrops = self.opt.tenCrop and 10 or 1
    local top1Sum, top5Sum = 0.0, 0.0
    local N = 0
-   -- #############################################
+   -- The file I/O part is just for output test results
+   -- When you train the model you should remove this part
    f = io.open("result", "w")
    f2 = io.open("target", "w")
    self.model:evaluate()
@@ -92,8 +92,6 @@ function Trainer:test(epoch, dataloader)
       self:copyInputs(sample)
 
       local output = self.model:forward(self.input):float()
-      print(self)
-      print(sample.target)
       for j = 1, sample.target:size()[1] do
          f2:write(sample.target[j] .. '\n')
       end
@@ -133,7 +131,7 @@ function Trainer:computeScore(output, target, nCrops)
          :sum(2):squeeze(2)
    end
 
-   -- Coputes the top1 and top5 error rate
+   -- Computes the top1 and top5 error rate
    local batchSize = output:size(1)
 
    local _ , predictions = output:float():sort(2, true) -- descending
@@ -153,8 +151,6 @@ function Trainer:computeScore(output, target, nCrops)
 end
 
 function Trainer:copyInputs(sample)
-   -- Copies the input to a CUDA tensor, if using 1 GPU, or to pinned memory,
-   -- if using DataParallelTable. The target is always copied to a CUDA tensor
    self.input = self.input or (self.opt.nGPU == 1
       and torch.CudaTensor()
       or cutorch.createCudaHostTensor())

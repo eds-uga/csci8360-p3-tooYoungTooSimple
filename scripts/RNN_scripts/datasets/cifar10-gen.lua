@@ -11,6 +11,8 @@ local function convertToTensor(file)
       label = table.remove(tmp, 1)
       tmp = torch.Tensor(tmp):byte()
       label = label + 1
+      -- this part you should use int() to output test filenames. 
+      -- byte() will convert file names to 0-255
       label = torch.Tensor({label}):int()
       if not data then
          data = tmp
@@ -26,8 +28,9 @@ local function convertToTensor(file)
       labels = labels,
    }
 end
---------------------------------Modify this part
+--------------------------------Modify this part 
 function M.exec(opt, cacheFile)
+   -- the path should be your training and test data
    local trainData = convertToTensor('gen/testHead100')
    local testData = convertToTensor('gen/testPixelData3')
 
