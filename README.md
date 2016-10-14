@@ -1,8 +1,8 @@
 # csci8360-p3-tooYoungTooSimple
 
-#  CIFAR-10 Image Classification with Deep Residual Networks on Torch
+#  CIFAR-10 Image Classification with Deep Residual Neural Networks on Torch
 
-This is project 3 in CSCI 8360 course at University of Georgia, Spring 2016. In this project we were challenged to predict the class labels of the test set from CIFAR-10 image dataset with 10 different labeled categories. The dataset consist of 60,000 PNG images with 50,000 in the training set and 10,000 in the test set. We conducted a number of manipulations on the data and applied the Deep Residual Networks with 200 layers by Kaiming He to train the classification model. In the end, the model achieves 92.82% prediction accuracy in the test set.
+This is project 3 in CSCI 8360 course at University of Georgia, Spring 2016. In this project we were challenged to predict the class labels of the test set from CIFAR-10 image dataset with 10 different labeled categories. The dataset consist of 60,000 PNG images with 50,000 in the training set and 10,000 in the test set. We conducted a number of manipulations on the data and applied the Deep Residual Networks with 119 layers by Kaiming He to train the classification model. In the end, the model achieves 92.82% prediction accuracy in the test set.
 
 ## Getting Started
 
