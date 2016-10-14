@@ -25,7 +25,7 @@ Here is the reference paper:
 
 The basic building block of Deep Residual Learning network is:
 
-![residualunit](csci8360-p3-tooYoungTooSimple/residualunit.png)
+![residualunit](https://github.com/csci8360-p3-tooYoungTooSimple/residualunit.png)
 
 ###Model Training
 * Convert the PNGs to trainDataPixel and testDataPixel. (convertPNG.py and cleanPNGVectors.py) 
