@@ -56,18 +56,18 @@ We consider  the train and test data:
 
 ###Prediction
 
-Conducting classification on the test set by the above model, we achieve classification accuracy 92.51%.
+Conducting classification on the test set by the above model, we achieve classification accuracy 92.82%.
 
 
 ## Running
 To run the code, be sure change the data path and install all dependent lua modules, and run with  command simply as below,
 
 ```
-th main.lua -netType residual-nn-pre -depth 1001 -batchSize 64 -nGPU 2 -nThreads 4 -dataset cifar10 -nEpochs 200 -shareGradInput false
-
-
-
-
+th main.lua -netType resnet-pre-act -depth 119 -batchSize 64 -nGPU 1 -nThreads 4 -dataset cifar10 -nEpochs 250 -shareGradInput false 
+```
+Test the data by existing checkpoints,
+```
+th main.lua -netType resnet-pre-act -depth 119 -batchSize 64 -nGPU 1 -nThreads 4 -dataset cifar10 -nEpochs 250 -shareGradInput false -testOnly true -resume ~/torchTest/checkpoints
 ```
 
 ## Authors
