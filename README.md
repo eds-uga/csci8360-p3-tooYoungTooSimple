@@ -6,7 +6,7 @@ This is project 3 in CSCI 8360 course at University of Georgia, Spring 2016. In 
 
 ## Getting Started
 
-Here are the instructions to run the .lua scripts with torch locally on Mac OS or Linux, if one wants to run this code in Amazon AWS EMR, be sure to change the data path.
+Here are the instructions to run the .lua scripts with torch on AWS EC2 GPU instance. Be sure to change the data path when you run the scripts locally.
 
 
 ### Installing
