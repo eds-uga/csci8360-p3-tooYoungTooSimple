@@ -72,4 +72,4 @@ For the meaning of options please see 'opts.lua' file.
 ## Acknowledgments
 
 * Thanks all team members for the laborious work and great collaboration.
-* Thanks [Dr. Quinn](http://cobweb.cs.uga.edu/~squinn/), .
+* Thanks [Dr. Quinn](http://cobweb.cs.uga.edu/~squinn/).
